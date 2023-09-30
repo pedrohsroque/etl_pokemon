@@ -62,7 +62,7 @@ class ETLPokemon:
         ]
         self.LIMIT = 100
 
-    def validate_object_name(self, object_name: str):
+    def validate_object_name(self, object_name: str) -> str:
         """
         Check if the object name is available
         """
@@ -73,7 +73,7 @@ class ETLPokemon:
     def _get(self, url, query):
         return requests.get(url, query, timeout=100)
 
-    def get_elements(self, object_name: str, query: dict=None):
+    def get_elements(self, object_name: str, query: dict=None) -> dict:
         """
         Get one page of elements for the given element.
         """
@@ -87,7 +87,7 @@ class ETLPokemon:
 
     def get_all_elements(self, object_name: str):
         """
-        Get all elements for a given object
+        Get all elements for a given object and save it locally.
         """
         # initial parameters
         idx = 0
@@ -107,7 +107,7 @@ class ETLPokemon:
             params_dict = self.extract_params_from_url_query(url=next_url)
             query.update({"offset": params_dict["offset"]})
 
-    def extract_params_from_url_query(self, url: str):
+    def extract_params_from_url_query(self, url: str) -> dict:
         """
         Extract the params from a url_query:\n
         e.g.:\n
@@ -129,6 +129,6 @@ class ETLPokemon:
 
 if __name__ == "__main__":
     etlpokemon = ETLPokemon()
-    for object_nm in etlpokemon.ALLOWED_OBJECTS[-2:]:
+    for object_nm in etlpokemon.ALLOWED_OBJECTS:
         print(f"Getting data for {object_nm}")
         etlpokemon.get_all_elements(object_name=object_nm)
