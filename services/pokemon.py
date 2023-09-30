@@ -60,7 +60,7 @@ class ETLPokemon:
             # "pokemon-stat",
             # "pokemon-type",
         ]
-        self.LIMIT = 100
+        self.LIMIT = 1000
 
     def validate_object_name(self, object_name: str) -> str:
         """
@@ -121,10 +121,11 @@ class ETLPokemon:
 
     def save_data(self, response: str, object_name: str, idx: int):
         """
-        Save json data localy
+        Save the data localy in a jsonl file.
         """
-        with open(f"data/{object_name}_{idx}.json", "w", encoding="UTF-8") as f:
-            f.writelines(json.dumps(response))
+        mode = "w" if idx == 0 else "a"
+        with open(f"data/{object_name}.jsonl", mode, encoding="UTF-8") as f:
+            f.writelines(f"{json.dumps(response)}\n")
 
 
 if __name__ == "__main__":
