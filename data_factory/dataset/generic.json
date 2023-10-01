@@ -1,0 +1,15 @@
+{
+	"name": "generic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "rest_api_pokeapi",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": ""
+		},
+		"schema": []
+	}
+}
