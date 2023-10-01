@@ -3,7 +3,10 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "blob_storage_pokeapi",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"limit": "100"
+			}
 		},
 		"annotations": [],
 		"type": "Json",

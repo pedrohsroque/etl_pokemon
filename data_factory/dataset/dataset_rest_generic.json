@@ -3,7 +3,10 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "rest_api_pokeapi",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"limit": "50"
+			}
 		},
 		"annotations": [],
 		"type": "RestResource",
