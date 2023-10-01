@@ -1,0 +1,19 @@
+{
+	"name": "dataset_blob_json_generic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blob_storage_pokeapi",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "raw",
+				"container": "container-learning-datafactory"
+			}
+		},
+		"schema": {}
+	}
+}
