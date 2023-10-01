@@ -2,6 +2,12 @@
 	"name": "rest_api_pokeapi",
 	"properties": {
 		"description": "Conexão com a api pokeapi",
+		"parameters": {
+			"limit": {
+				"type": "string",
+				"defaultValue": "50"
+			}
+		},
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
