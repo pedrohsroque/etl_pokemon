@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "berry.json",
 				"folderPath": "raw",
 				"container": "container-learning-datafactory"
 			}
