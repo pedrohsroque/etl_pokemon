@@ -4,8 +4,8 @@
 		"description": "Conexão com a api pokeapi",
 		"parameters": {
 			"limit": {
-				"type": "string",
-				"defaultValue": "50"
+				"type": "int",
+				"defaultValue": 50
 			}
 		},
 		"annotations": [],
