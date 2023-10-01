@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "berry/"
+					},
+					{
+						"name": "Destination",
+						"value": "container-learning-datafactory/raw/berry.json"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "RestSource",
