@@ -1,5 +1,5 @@
 {
-	"name": "generic",
+	"name": "dataset_rest_generic",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "rest_api_pokeapi",
